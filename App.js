@@ -180,7 +180,7 @@ const coins = [
   {key: 'MOD', text: 'Modum', value: 'MOD', picURL: 'mod'},
   {key: 'NLG', text: 'Gulden', value: 'NLG', picURL: 'nlg'},
 ];
-
+var imageURL = './icons/CUSTOM.png';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -192,12 +192,13 @@ export default class App extends React.Component {
       valueCustom1: '0',
       apiData: 'nothing yet',
       selection1: 'ETH',
-      picURL: require("./icons/ETH.png"),
+      coin1: false,
       loading: true
     };
 
     this.handleChangeSelection1 = this.handleChangeSelection1.bind(this);
     this.handleChangeCustomAmount1 = this.handleChangeCustomAmount1.bind(this);
+    this.handleAddCoin1 = this.handleAddCoin1.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.saveData = this.saveData.bind(this);
   }
@@ -233,9 +234,6 @@ export default class App extends React.Component {
     this.setState({
       selection1: value
     });
-    // var imageURL = 'require("./icons/' + this.state.selection1 + '.png")';
-    // var imageURL = window.imageURL
-    // console.log('imageURL is: ' + imageURL);
     console.log('this.state.selection1 is: ' + this.state.selection1);
   }
 
@@ -245,6 +243,13 @@ export default class App extends React.Component {
       event.target.value = 0
     }
     console.log('this.state.amountCustom1 is: ' + this.state.amountCustom1);
+  }
+
+  handleAddCoin1() {
+    this.setState(prevState => ({
+      //counter: this.state.counter + 1,
+      coin1: true,
+    }));
   }
 
   //calculate
@@ -312,10 +317,7 @@ export default class App extends React.Component {
               <Body>
                 <Grid>
                   <Col size={50}>
-                    <Image
-                     source={require("./icons/CUSTOM.png")}
-                     style={{ alignSelf: 'center'}}
-                    />
+                    <H3>{this.state.selection1}</H3>
                     <Form>
                       <Picker
                         mode="dropdown"
@@ -652,7 +654,7 @@ export default class App extends React.Component {
               </Button>
             </Col>
             <Col size={15}>
-              <Button light info>
+              <Button light info onPress={this.handleAddCoin1}>
                 <Icon name="md-add" />
               </Button>
             </Col>
