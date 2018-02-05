@@ -182,7 +182,8 @@ export default class App extends React.Component {
       coin2: false,
       buttons2: false,
       buttons1: true,
-      valueCustom2: '0'
+      valueCustom2: '0',
+      amountCustom2: '0'
     });
   }
 
@@ -190,7 +191,9 @@ export default class App extends React.Component {
     this.setState({
       coin3: false,
       buttons3: false,
-      buttons2: true
+      buttons2: true,
+      valueCustom3: '0',
+      amountCustom3: '0'
     });
   }
 
@@ -198,7 +201,9 @@ export default class App extends React.Component {
     this.setState({
       coin4: false,
       buttons4: false,
-      buttons3: true
+      buttons3: true,
+      valueCustom4: '0',
+      amountCustom4: '0'
     });
   }
 
@@ -206,7 +211,9 @@ export default class App extends React.Component {
     this.setState({
       coin5: false,
       buttons5: false,
-      buttons4: true
+      buttons4: true,
+      valueCustom5: '0',
+      amountCustom5: '0'
     });
   }
 
@@ -214,7 +221,9 @@ export default class App extends React.Component {
     this.setState({
       coin6: false,
       buttons6: false,
-      buttons5: true
+      buttons5: true,
+      valueCustom6: '0',
+      amountCustom6: '0'
     });
   }
 
@@ -229,7 +238,7 @@ export default class App extends React.Component {
         var rateCustomPrint1 = ('($ ' + rateCustom1 + ')');
         const resultCalcRawCustom1 = parseFloat(rateCustom1) * parseFloat(this.state.amountCustom1);
         const resultCalcCustom1 = resultCalcRawCustom1.toFixed(2);
-        console.log('Custom choice is ' + this.state.selection1 + " | Rate: " + rateCustom1 + " | " + resultCalcRawCustom1 + " | You have " + this.state.selection1 + " in worth of " + resultCalcCustom1 + "Dollar");
+        console.log('1: ' + this.state.amountCustom1, this.state.selection1 + " | Rate: " + rateCustom1 + " | " + resultCalcRawCustom1 + " | You have " + this.state.selection1 + " in worth of " + resultCalcCustom1 + "Dollar");
         this.setState({
           rateCustom1: rateCustom1,
           rateCustomPrint1: rateCustomPrint1,
@@ -244,7 +253,7 @@ export default class App extends React.Component {
         var rateCustomPrint2 = ('($ ' + rateCustom2 + ')');
         const resultCalcRawCustom2 = parseFloat(rateCustom2) * parseFloat(this.state.amountCustom2);
         const resultCalcCustom2 = resultCalcRawCustom2.toFixed(2);
-        console.log('Custom choice is ' + this.state.selection2 + " | Rate: " + rateCustom2 + " | " + resultCalcRawCustom2 + " | You have " + this.state.selection2 + " in worth of " + resultCalcCustom2 + "Dollar");
+        console.log('2: ' + this.state.amountCustom2, this.state.selection2 + " | Rate: " + rateCustom2 + " | " + resultCalcRawCustom2 + " | You have " + this.state.selection2 + " in worth of " + resultCalcCustom2 + "Dollar");
         this.setState({
           rateCustom2: rateCustom2,
           rateCustomPrint2: rateCustomPrint2,
@@ -259,7 +268,7 @@ export default class App extends React.Component {
         var rateCustomPrint3 = ('($ ' + rateCustom3 + ')');
         const resultCalcRawCustom3 = parseFloat(rateCustom3) * parseFloat(this.state.amountCustom3);
         const resultCalcCustom3 = resultCalcRawCustom3.toFixed(2);
-        console.log('Custom choice is ' + this.state.selection3 + " | Rate: " + rateCustom3 + " | " + resultCalcRawCustom3 + " | You have " + this.state.selection3 + " in worth of " + resultCalcCustom3 + "Dollar");
+        console.log('3: ' + this.state.amountCustom3, this.state.selection3 + " | Rate: " + rateCustom3 + " | " + resultCalcRawCustom3 + " | You have " + this.state.selection3 + " in worth of " + resultCalcCustom3 + "Dollar");
         this.setState({
           rateCustom3: rateCustom3,
           rateCustomPrint3: rateCustomPrint3,
@@ -274,7 +283,7 @@ export default class App extends React.Component {
         var rateCustomPrint4 = ('($ ' + rateCustom4 + ')');
         const resultCalcRawCustom4 = parseFloat(rateCustom4) * parseFloat(this.state.amountCustom4);
         const resultCalcCustom4 = resultCalcRawCustom4.toFixed(2);
-        console.log('Custom choice is ' + this.state.selection4 + " | Rate: " + rateCustom4 + " | " + resultCalcRawCustom4 + " | You have " + this.state.selection4 + " in worth of " + resultCalcCustom4 + "Dollar");
+        console.log('4: ' + this.state.amountCustom4, this.state.selection4 + " | Rate: " + rateCustom4 + " | " + resultCalcRawCustom4 + " | You have " + this.state.selection4 + " in worth of " + resultCalcCustom4 + "Dollar");
         this.setState({
           rateCustom4: rateCustom4,
           rateCustomPrint4: rateCustomPrint4,
@@ -289,7 +298,7 @@ export default class App extends React.Component {
         var rateCustomPrint5 = ('($ ' + rateCustom5 + ')');
         const resultCalcRawCustom5 = parseFloat(rateCustom5) * parseFloat(this.state.amountCustom5);
         const resultCalcCustom5 = resultCalcRawCustom5.toFixed(2);
-        console.log('Custom choice is ' + this.state.selection5 + " | Rate: " + rateCustom5 + " | " + resultCalcRawCustom5 + " | You have " + this.state.selection5 + " in worth of " + resultCalcCustom5 + "Dollar");
+        console.log('5: ' + this.state.amountCustom5, this.state.selection5 + " | Rate: " + rateCustom5 + " | " + resultCalcRawCustom5 + " | You have " + this.state.selection5 + " in worth of " + resultCalcCustom5 + "Dollar");
         this.setState({
           rateCustom5: rateCustom5,
           rateCustomPrint5: rateCustomPrint5,
@@ -304,7 +313,7 @@ export default class App extends React.Component {
         var rateCustomPrint6 = ('($ ' + rateCustom6 + ')');
         const resultCalcRawCustom6 = parseFloat(rateCustom6) * parseFloat(this.state.amountCustom6);
         const resultCalcCustom6 = resultCalcRawCustom6.toFixed(2);
-        console.log('Custom choice is ' + this.state.selection6 + " | Rate: " + rateCustom6 + " | " + resultCalcRawCustom6 + " | You have " + this.state.selection6 + " in worth of " + resultCalcCustom6 + "Dollar");
+        console.log('6: ' + this.state.amountCustom6, this.state.selection6 + " | Rate: " + rateCustom6 + " | " + resultCalcRawCustom6 + " | You have " + this.state.selection6 + " in worth of " + resultCalcCustom6 + "Dollar");
         this.setState({
           rateCustom6: rateCustom6,
           rateCustomPrint6: rateCustomPrint6,
@@ -2494,7 +2503,7 @@ export default class App extends React.Component {
           <View style={{ alignSelf: 'center', marginTop: 20 }}>
             <H3>All coins together: $ {calcAll}</H3>
           </View>
-          <View style={{ alignSelf: 'center', marginTop: 20 }}>
+          <View style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
             <Button style={{ backgroundColor: '#2196F3'}} onPress={this.handleSubmit} accessibilityLabel="Calculate the amount">
               <Text>Calculate</Text>
             </Button>
