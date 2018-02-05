@@ -718,7 +718,7 @@ export default class App extends React.Component {
             <Col size={70}></Col>
             {
               this.state.buttons1?
-                <Button success onPress={this.handleAddCoin2}><Icon name="md-add" /></Button>
+                <Button light onPress={this.handleAddCoin2}><Icon name="md-add" /></Button>
                 :
                 <Col size={30}></Col>
             }
@@ -1066,14 +1066,14 @@ export default class App extends React.Component {
             <Col size={40}></Col>
             {
               this.state.buttons2?
-                <Button danger onPress={this.handleRemoveCoin2}><Icon name="md-close" /></Button>
+                <Button light onPress={this.handleRemoveCoin2}><Icon name="md-close" /></Button>
                 :
                   <Col></Col>
             }
             <Col size={2}></Col>
             {
               this.state.buttons2?
-                <Button success onPress={this.handleAddCoin3}><Icon name="md-add" /></Button>
+                <Button light onPress={this.handleAddCoin3}><Icon name="md-add" /></Button>
                 :
                 <Col></Col>
             }
@@ -1421,14 +1421,14 @@ export default class App extends React.Component {
             <Col size={40}></Col>
             {
               this.state.buttons3?
-                <Button danger onPress={this.handleRemoveCoin3}><Icon name="md-close" /></Button>
+                <Button light onPress={this.handleRemoveCoin3}><Icon name="md-close" /></Button>
                 :
                   <Col></Col>
             }
             <Col size={2}></Col>
             {
               this.state.buttons3?
-                <Button success onPress={this.handleAddCoin4}><Icon name="md-add" /></Button>
+                <Button light onPress={this.handleAddCoin4}><Icon name="md-add" /></Button>
                 :
                 <Col></Col>
             }
@@ -1776,14 +1776,14 @@ export default class App extends React.Component {
             <Col size={40}></Col>
             {
               this.state.buttons4?
-                <Button danger onPress={this.handleRemoveCoin4}><Icon name="md-close" /></Button>
+                <Button light onPress={this.handleRemoveCoin4}><Icon name="md-close" /></Button>
                 :
                   <Col></Col>
             }
             <Col size={2}></Col>
             {
               this.state.buttons4?
-                <Button success onPress={this.handleAddCoin5}><Icon name="md-add" /></Button>
+                <Button light onPress={this.handleAddCoin5}><Icon name="md-add" /></Button>
                 :
                 <Col></Col>
             }
@@ -2131,14 +2131,14 @@ export default class App extends React.Component {
             <Col size={40}></Col>
             {
               this.state.buttons5?
-                <Button danger onPress={this.handleRemoveCoin5}><Icon name="md-close" /></Button>
+                <Button light onPress={this.handleRemoveCoin5}><Icon name="md-close" /></Button>
                 :
                   <Col></Col>
             }
             <Col size={2}></Col>
             {
               this.state.buttons5?
-                <Button success onPress={this.handleAddCoin6}><Icon name="md-add" /></Button>
+                <Button light onPress={this.handleAddCoin6}><Icon name="md-add" /></Button>
                 :
                 <Col></Col>
             }
@@ -2486,7 +2486,7 @@ export default class App extends React.Component {
             <Col size={40}></Col>
             {
               this.state.buttons6?
-                <Button danger onPress={this.handleRemoveCoin6}><Icon name="md-close" /></Button>
+                <Button light onPress={this.handleRemoveCoin6}><Icon name="md-close" /></Button>
                 :
                   <Col></Col>
             }
