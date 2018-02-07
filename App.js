@@ -338,23 +338,71 @@ export default class App extends React.Component {
 
   //safe data to store
   saveData() {
-    let saveAmounts = {
-      DRGN: this.state.amountDRGN,
+    let saveData = {
+      selection1: this.state.selection1,
+      selection2: this.state.selection2,
+      selection3: this.state.selection3,
+      selection4: this.state.selection4,
+      selection5: this.state.selection5,
+      selection6: this.state.selectoin6,
+      coin2: this.state.coin2,
+      coin3: this.state.coin3,
+      coin4: this.state.coin4,
+      coin5: this.state.coin5,
+      coin6: this.state.coin6,
+      buttons1: this.state.buttons1,
+      buttons2: this.state.buttons2,
+      buttons3: this.state.buttons3,
+      buttons4: this.state.buttons4,
+      buttons5: this.state.buttons5,
+      buttons6: this.state.buttons6,
+      amountCustom1: this.state.amountCustom1,
+      amountCustom2: this.state.amountCustom2,
+      amountCustom3: this.state.amountCustom3,
+      amountCustom4: this.state.amountCustom4,
+      amountCustom5: this.state.amountCustom5,
+      amountCustom6: this.state.amountCustom6
     }
-    AsyncStorage.setItem('savedAmounts', JSON.stringify(saveAmounts));
-    console.log('Saved is now: ', saveAmounts );
+    AsyncStorage.setItem('savedData', JSON.stringify(saveData));
+    console.log('saveData is : ', saveData );
     alert('Data is saved')
   }
 
   //get data from store
   displayData = async () => {
     try {
-      let savedAmounts = await AsyncStorage.getItem('savedAmounts');
-      let parsed = JSON.parse(savedAmounts);
+      let savedData = await AsyncStorage.getItem('savedData');
+      let parsed = JSON.parse(savedData);
       console.log('parsed is: ', parsed);
-      console.log('parsed.DRGN is: ', parsed.DRGN);
+      console.log('parsed.selection1 is: ', parsed.selection1);
+      console.log('parsed.amountCustom1 is: ', parsed.amountCustom1);
+      console.log('parsed.coin1 is: ', parsed.coin1);
+      console.log('parsed.coin2 is: ', parsed.coin2);
+      console.log('parsed.selection2 is: ', parsed.selection2);
       this.setState({
-        amountDRGN: parsed.DRGN
+        selection1: parsed.selection1,
+        selection2: parsed.selection2,
+        selection3: parsed.selection3,
+        selection4: parsed.selection4,
+        selection5: parsed.selection5,
+        selection6: parsed.selection6,
+        coin2: parsed.coin2,
+        coin3: parsed.coin3,
+        coin4: parsed.coin4,
+        coin5: parsed.coin5,
+        coin6: parsed.coin6,
+        buttons1: parsed.buttons1,
+        buttons2: parsed.buttons2,
+        buttons3: parsed.buttons3,
+        buttons4: parsed.buttons4,
+        buttons5: parsed.buttons5,
+        buttons6: parsed.buttons6,
+        amountCustom1: parsed.amountCustom1,
+        amountCustom2: parsed.amountCustom2,
+        amountCustom3: parsed.amountCustom3,
+        amountCustom4: parsed.amountCustom4,
+        amountCustom5: parsed.amountcustom5,
+        amountCustom6: parsed.amountCustom6
       });
     }
     catch(error) {
@@ -2507,6 +2555,13 @@ export default class App extends React.Component {
             <Button style={{ backgroundColor: '#2196F3'}} onPress={this.handleSubmit} accessibilityLabel="Calculate the amount">
               <Text>Calculate</Text>
             </Button>
+            <TouchableOpacity onPress={this.saveData}>
+              <Text>Save this for me</Text>
+            </TouchableOpacity>
+            <Text> --- </Text>
+            <TouchableOpacity onPress={this.displayData}>
+             <Text>Load my data</Text>
+            </TouchableOpacity>
           </View>
         </Content>
       </Container>
